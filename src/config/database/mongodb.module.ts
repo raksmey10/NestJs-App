@@ -9,7 +9,7 @@ import config from './mongodb.config';
     MongooseModule.forRootAsync({
       useFactory: (configService: ConfigType<typeof config>) => {
         return {
-          uri: configService.uri,
+          uri: configService.MONGO.URI,
         };
       },
       inject: [config.KEY],

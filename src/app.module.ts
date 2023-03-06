@@ -7,6 +7,7 @@ import mongodbConfig from './config/database/mongodb.config';
 import { environments } from './config/environments';
 import { ConfigModule } from '@nestjs/config';
 import { mongodbModule } from './config/database/mongodb.module';
+import * as Joi from 'joi';
 
 @Module({
   imports: [
@@ -14,6 +15,10 @@ import { mongodbModule } from './config/database/mongodb.module';
       envFilePath: environments[process.env.NODE_ENV] || '.env',
       load: [mongodbConfig],
       isGlobal: true,
+      validationSchema: Joi.object({
+        MONGODB_URI: Joi.string().required(),
+        PORT: Joi.number().default(3000),
+      }),
     }),
     mongodbModule,
   ],
