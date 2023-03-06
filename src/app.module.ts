@@ -18,7 +18,6 @@ import { mongodbModule } from './config/database/mongodb.module';
     mongodbModule,
   ],
 
-  // MongooseModule.forRoot('mongodb+srv://raksmey:lBzwRHZG6Yr333FN@cluster0.dhjzjhp.mongodb.net/myapp')
   // MongooseModule.forRootAsync({
   //   imports: [ConfigModule],
   //   inject: [ConfigService],
