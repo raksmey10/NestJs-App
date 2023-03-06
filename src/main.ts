@@ -5,11 +5,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  // const config: ConfigService = app.get(ConfigService);
-  // const port = parseInt(process.env.PORT, 10);
-  // await app.listen(config.get<number>('port'), () =>
-  //   console.log(`Running on port ${port}...`),
-  // );
-  await app.listen(3000, () => console.log(`Running on port 3000...`));
+  const port = parseInt(process.env.PORT, 10);
+  await app.listen(port, () => console.log(`Running on port ${port}...`));
 }
 bootstrap().then(() => console.log('Success'));
