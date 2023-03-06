@@ -7,8 +7,6 @@ COPY package*.json ./
 
 RUN rm -rf /dist
 
-RUN rm package-lock.json
-
 RUN npm install
 
 COPY . .
