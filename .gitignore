@@ -35,7 +35,7 @@ lerna-debug.log*
 !.vscode/extensions.json
 
 # Docker compose
-docker-compose.yaml
+#docker-compose.yaml
 
 # environment variables
 .env
