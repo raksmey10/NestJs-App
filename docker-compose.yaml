@@ -6,8 +6,8 @@ services:
     container_name: nestjs_mongodb
     ports:
       - '3000:3000'
-    depends_on:
-      - database
+#    depends_on:
+#      - database
     networks:
       - nestjs-network
 
