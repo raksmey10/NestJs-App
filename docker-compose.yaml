@@ -22,16 +22,3 @@ services:
 networks:
   nestjs-network:
     driver: bridge
-
-#      - PORT=${PORT}
-#      - MONGO_URI=mongodb://mongo_db:27017/app_db
-#    ports:
-#      - '27017:27017'
-
-#    environment:
-#      - PORT=3000
-#      - MONGO_URI=mongodb+srv://raksmey:lBzwRHZG6Yr333FN@cluster0.dhjzjhp.mongodb.net/myapp
-
-#    environment:
-#      - MONGO_USERNAME=raksmey
-#      - MONGO_PASSWORD=lBzwRHZG6Yr333FN

@@ -22,12 +22,13 @@ ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
 COPY --from=build /usr/src/app/dist ./dist
+COPY --from=build /usr/src/app/.env ./
 
 COPY package*.json ./
 
 RUN npm install --only=production
 
-RUN rm package*.json
+RUN rm -rf package*.json
 
 EXPOSE 3000
 
