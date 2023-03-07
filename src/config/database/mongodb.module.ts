@@ -1,20 +1,16 @@
-import { Global, Module } from '@nestjs/common';
-import { ConfigType } from '@nestjs/config';
-import { MongooseModule } from '@nestjs/mongoose';
-import config from './mongodb.config';
-
-@Global()
-@Module({
-  imports: [
-    MongooseModule.forRootAsync({
-      useFactory: (configService: ConfigType<typeof config>) => {
-        return {
-          uri: configService.MONGO.URI,
-        };
-      },
-      inject: [config.KEY],
-    }),
-  ],
-  exports: [MongooseModule],
-})
-export class mongodbModule {}
+// import { Global, Module } from '@nestjs/common';
+// import { MongooseModule } from '@nestjs/mongoose';
+// // import { ConfigService } from 'nestjs-dotenv';
+//
+// @Global()
+// @Module({
+//   imports: [
+//     MongooseModule.forRootAsync({
+//       useFactory: async (configService: ConfigService) => ({
+//         uri: configService.get('MONGODB_URL'),
+//       }),
+//       inject: [ConfigService],
+//     }),
+//   ],
+// })
+// export class MongodbModule {}
