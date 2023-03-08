@@ -6,7 +6,7 @@ services:
     image: rsmdk/nestjs:0.0.1
     container_name: nestjs_mongodb
     ports:
-      - '3000:3000'
+      - '${PORT}:${PORT}'
 #    depends_on:
 #      - database
     networks:
