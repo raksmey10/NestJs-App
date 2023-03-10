@@ -3,6 +3,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 @Schema({ timestamps: true })
 export class Expense {
 	@Prop({ required: true }) item: string;
+	@Prop({ type: 'string' }) note: string;
 	@Prop({
 		required: true,
 		type: 'boolean',
